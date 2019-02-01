@@ -1,0 +1,30 @@
+{
+    "jest": {
+        "verbose": true,
+        "collectCoverage": true,
+        "coverageDirectory": "coverage",
+        "coverageReporters": ["json", "text"],
+        "collectCoverageFrom": [
+            "**/*.{js,vue}",
+            "!src/main.js",
+            "!**/node_modules/**",
+            "!**/coverage/**"
+        ],
+        "moduleFileExtensions": [
+            "js",
+            "vue"
+        ],
+        "modulePaths": [
+            "<rootDir>/src",
+            "<rootDir>/node_modules"
+        ],
+        "transform": {
+            "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+            ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+            ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "<rootDir>/node_modules/jest-transform-stub"
+        },
+        "moduleNameMapper": {
+            "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "<rootDir>/node_modules/jest-transform-stub"
+        }
+    }
+}
